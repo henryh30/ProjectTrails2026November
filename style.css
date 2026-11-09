@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  max-width: calc(390rem / 16);
+}
+
+.heroContainer {
+  position: relative;
+}
+
+.heroContainer h1,
+.heroContainer button {
+  position: absolute;
+  bottom: calc(4rem / 16);
+  left: 0;
+}
