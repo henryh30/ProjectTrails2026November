@@ -21,7 +21,14 @@ require_once __DIR__ . '/data.php';
         <h1>NEW ARRIVALS</h1>
         <button>See more here</button>
     </div>
-
+    <div class="productCards">
+        <?php foreach ($productCards as $card) : ?>
+            <div class="card">
+                <img href="<?php echo $card['imageUrl'] ?>" alt="A <?php echo $card['name'] ?>" />
+                <h3><?php echo $card['name'] ?></h3>
+            </div>
+        <?php endforeach; ?>
+    </div>
     <div class="mailPanel">
         <form action="" method="post">
             <label for="email">Email</label>
