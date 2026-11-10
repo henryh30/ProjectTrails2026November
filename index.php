@@ -16,7 +16,7 @@ require_once __DIR__ . '/data.php';
     </header>
     <div class="heroContainer">
         <video autoplay loop muted>
-            <source src="cube_Video.mp4" type="video/mp4" />
+            <source src="image_video\cube_Video.mp4" type="video/mp4" />
         </video>
         <h1>NEW ARRIVALS</h1>
         <button>See more here</button>
