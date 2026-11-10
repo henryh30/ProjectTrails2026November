@@ -24,7 +24,7 @@ require_once __DIR__ . '/data.php';
     <div class="productCards">
         <?php foreach ($productCards as $card) : ?>
             <div class="card">
-                <img href="<?php echo $card['imageUrl'] ?>" alt="A <?php echo $card['name'] ?>" />
+                <img src="<?php echo $card['imageUrl'] ?>" alt="A <?php echo $card['name'] ?>" />
                 <h3><?php echo $card['name'] ?></h3>
             </div>
         <?php endforeach; ?>
