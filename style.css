@@ -15,3 +15,8 @@
   bottom: calc(4rem / 16);
   left: 0;
 }
+
+.heroContainer > video {
+  max-width: 100%;
+  max-height: 100%;
+}
