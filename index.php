@@ -8,9 +8,17 @@ require_once __DIR__ . '/data.php';
         <nav>
             <a href="index.html">Spår</a>
             <div>
-                <a href="#">Sv/En</a>
-                <button>Join</button>
-                <button>-</button>
+                <div>
+                    <a href="#">Sv</a>
+                    <span>/</span>
+                    <a href="#">En</a>
+                </div>
+                <a href="#">
+                    <img src="image_video\search_icon.png" alt="Sök ikon">
+                </a>
+                <a href="#">
+                    <img src="image_video\hamburger_icon.png" alt="Hamburgare ikon">
+                </a>
             </div>
         </nav>
     </header>
