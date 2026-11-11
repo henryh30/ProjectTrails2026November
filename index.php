@@ -22,91 +22,94 @@ require_once __DIR__ . '/data.php';
             </div>
         </nav>
     </header>
-    <div class="heroContainer">
-        <video autoplay loop muted>
-            <source src="image_video\cube_Video.mp4" type="video/mp4" />
-        </video>
-        <div>
-            <h1>NEW ARRIVALS</h1>
-            <p>EXPLORE OUR NEW EXCLUSIVE BLOOM DROP</p>
-            <button>Read more about Bloom tech</button>
-        </div>
-    </div>
-    <div>
-        <a href=#mailForm>Become a part of our community</a>
-    </div>
+    <main>
 
-    <div class="productBanner">
-        <div>
-            <h2>Explore our bloom technology</h2>
-        </div>
-        <div>
+        <div class="heroContainer">
             <video autoplay loop muted>
-                <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
-            </video>
-            <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE</p>
-        </div>
-        <div>
-            <button>Explore our process</button>
-        </div>
-    </div>
-
-    <div>
-        <div>
-            <h2>New arrivals</h2>
-        </div>
-        <div class="productCards">
-            <?php foreach ($productCards as $card) : ?>
-                <div class="card">
-                    <img src="<?php echo $card['imageUrl'] ?>" alt="A <?php echo $card['name'] ?>" />
-                    <h3><?php echo $card['name'] ?></h3>
-                    <p>899,00KR</p>
-                </div>
-            <?php endforeach; ?>
-        </div>
-        <div>
-            <button>Explore the whole collection</button>
-        </div>
-    </div>
-
-    <div class="productBanner">
-        <div>
-            <h2>Explore our bloom technology</h2>
-        </div>
-        <div>
-            <video autoplay loop muted>
-                <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
+                <source src="image_video\cube_Video.mp4" type="video/mp4" />
             </video>
             <div>
-                <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE 3D SHOE</p>
+                <h1>NEW ARRIVALS</h1>
+                <p>EXPLORE OUR NEW EXCLUSIVE BLOOM DROP</p>
+                <button>Read more about Bloom tech</button>
+            </div>
+        </div>
+        <div>
+            <a href=#mailForm>Become a part of our community</a>
+        </div>
+
+        <div class="productBanner">
+            <div>
+                <h2>Explore our bloom technology</h2>
+            </div>
+            <div>
+                <video autoplay loop muted>
+                    <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
+                </video>
+                <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE</p>
+            </div>
+            <div>
+                <button>Explore our process</button>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <h2>New arrivals</h2>
+            </div>
+            <div class="productCards">
+                <?php foreach ($productCards as $card) : ?>
+                    <div class="card">
+                        <img src="<?php echo $card['imageUrl'] ?>" alt="A <?php echo $card['name'] ?>" />
+                        <h3><?php echo $card['name'] ?></h3>
+                        <p>899,00KR</p>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <div>
+                <button>Explore the whole collection</button>
+            </div>
+        </div>
+
+        <div class="productBanner">
+            <div>
+                <h2>Explore our bloom technology</h2>
+            </div>
+            <div>
+                <video autoplay loop muted>
+                    <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
+                </video>
                 <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE 3D SHOE</p>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div>
-            <button>Try our AI designtool</button>
-        </div>
-    </div>
-
-    <div class="productBanner">
-        <div>
-            <h2>Explore our bloom technology</h2>
-        </div>
-        <div>
-            <video autoplay loop muted>
-                <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
-            </video>
             <div>
-                <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE 3D SHOE</p>
+                <button>Try our AI designtool</button>
             </div>
         </div>
-        <div>
-            <button>Button</button>
+
+        <div class="productBanner">
+            <div>
+                <h2>Explore our bloom technology</h2>
+            </div>
+            <div>
+                <video autoplay loop muted>
+                    <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
+                </video>
+                <div>
+                    <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE 3D SHOE</p>
+                </div>
+            </div>
+            <div>
+                <button>Button</button>
+            </div>
         </div>
-    </div>
+    </main>
 
     <footer>
         <div class="mailPanel">
