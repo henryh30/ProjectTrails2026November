@@ -18,41 +18,126 @@ require_once __DIR__ . '/data.php';
         <video autoplay loop muted>
             <source src="image_video\cube_Video.mp4" type="video/mp4" />
         </video>
-        <h1>NEW ARRIVALS</h1>
-        <button>See more here</button>
-    </div>
-    <div class="productCards">
-        <?php foreach ($productCards as $card) : ?>
-            <div class="card">
-                <img src="<?php echo $card['imageUrl'] ?>" alt="A <?php echo $card['name'] ?>" />
-                <h3><?php echo $card['name'] ?></h3>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <div class="mailPanel">
-        <form action="" method="post">
-            <label for="email">Email</label>
-            <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="example@mail.se" />
-            <button type="submit">submit</button>
-        </form>
-    </div>
-    <footer>
         <div>
-            <p>Kontakt</p>
+            <h1>NEW ARRIVALS</h1>
+            <p>EXPLORE OUR NEW EXCLUSIVE BLOOM DROP</p>
+            <button>Read more about Bloom tech</button>
+        </div>
+    </div>
+    <div>
+        <a href=#mailForm>Become a part of our community</a>
+    </div>
+
+    <div class="productBanner">
+        <div>
+            <h2>Explore our bloom technology</h2>
+        </div>
+        <div>
+            <video autoplay loop muted>
+                <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
+            </video>
+            <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE</p>
+        </div>
+        <div>
+            <button>Explore our process</button>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h2>New arrivals</h2>
+        </div>
+        <div class="productCards">
+            <?php foreach ($productCards as $card) : ?>
+                <div class="card">
+                    <img src="<?php echo $card['imageUrl'] ?>" alt="A <?php echo $card['name'] ?>" />
+                    <h3><?php echo $card['name'] ?></h3>
+                    <p>899,00KR</p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <div>
+            <button>Explore the whole collection</button>
+        </div>
+    </div>
+
+    <div class="productBanner">
+        <div>
+            <h2>Explore our bloom technology</h2>
+        </div>
+        <div>
+            <video autoplay loop muted>
+                <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
+            </video>
             <div>
-                <a href="mailto: ad28309@skola.goteborg.se">Mejl</a>
-                <a href="tel: +46760384435">Telefon</a>
+                <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE 3D SHOE</p>
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
         </div>
         <div>
-            <p>Om Spår</p>
+            <button>Try our AI designtool</button>
+        </div>
+    </div>
+
+    <div class="productBanner">
+        <div>
+            <h2>Explore our bloom technology</h2>
+        </div>
+        <div>
+            <video autoplay loop muted>
+                <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
+            </video>
             <div>
-                <a href="#">Om spår</a>
-                <a href="#">Våra butiker</a>
+                <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE 3D SHOE</p>
+            </div>
+        </div>
+        <div>
+            <button>Button</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="mailPanel">
+            <h2>Ta del av vårat community</h2>
+            <form action="" method="post">
+                <label for="email">E-postadress</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="example@meail.com" />
+                <button type="submit">Klicka för att gå med!</button>
+            </form>
+        </div>
+        <div>
+            <h4>Kontakt</h4>
+            <ul>
+                <p>ADRESS</p>
+                <li>SPÅRGATAN 12, 12345 SPÅR</li>
+                <p>E-POSTADRESS</p>
+                <li>SPÅR@SPÅR.CSE</li>
+                <p>TELEFON</p>
+                <li>123456789</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Info</h4>
+            <div>
+                <a href="#">REFOUND POLICY</a>
+                <a href="#">SHIPPING</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+        <div>
+            <h4>SOCIALA MEDIER</h4>
+            <div>
+                <a href="#">INSTAGRAM</a>
+                <a href="#">TIKTOK</a>
+                <a href="#">X</a>
             </div>
         </div>
     </footer>
