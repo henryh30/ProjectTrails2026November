@@ -1,3 +1,13 @@
+:root {
+  --h1Size: calc(72rem/16);
+  --h2Size: calc(44rem/16);
+  --h3Size: calc(32rem/16);
+  --h4Size: calc(24rem/16);
+  --paragraphSize: calc(24rem/16);
+  --paragraphSmallSize: calc(16rem/16);
+  --buttonFontSize: calc(16rem/16);
+}
+
 *,
 *::before,
 *::after {
