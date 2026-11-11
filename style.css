@@ -17,6 +17,13 @@
 a,
 button {
   text-decoration: none;
+  font-size: var(--buttonFontSize);
+  font-family: "DM Sans", sans-serif;
+  color: white;
+}
+
+nav a {
+  color: black;
 }
 
 nav {
@@ -45,4 +52,9 @@ nav > div {
   position: absolute;
   bottom: calc(4rem / 16);
   left: 0;
+}
+
+.buttonContainer {
+  padding: calc(8rem / 16) calc(16rem / 16);
+  background-color: black;
 }
