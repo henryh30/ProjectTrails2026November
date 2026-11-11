@@ -12,7 +12,19 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  max-width: calc(390rem / 16);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(16rem / 16);
 }
 
 .heroContainer {
