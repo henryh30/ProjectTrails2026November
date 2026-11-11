@@ -14,7 +14,6 @@ require_once __DIR__ . '/data.php';
                     <a href="#">En</a>
                 </div>
                 <div>
-
                     <a href="#">
                         <img src="image_video\search_icon.png" alt="Sök ikon">
                     </a>
@@ -34,10 +33,10 @@ require_once __DIR__ . '/data.php';
             <div>
                 <h1>NEW ARRIVALS</h1>
                 <p>EXPLORE OUR NEW EXCLUSIVE BLOOM DROP</p>
-                <button>Read more about Bloom tech</button>
+                <a href="#">Read more about Bloom tech</a>
             </div>
         </div>
-        <div>
+        <div class="buttonContainer">
             <a href=#mailForm>Become a part of our community</a>
         </div>
 
@@ -51,8 +50,8 @@ require_once __DIR__ . '/data.php';
                 </video>
                 <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE</p>
             </div>
-            <div>
-                <button>Explore our process</button>
+            <div class="buttonContainer">
+                <a href="#">Explore our process</a>
             </div>
         </div>
 
@@ -69,8 +68,8 @@ require_once __DIR__ . '/data.php';
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div>
-                <button>Explore the whole collection</button>
+            <div class="buttonContainer">
+                <a href="#">Explore the whole collection</a>
             </div>
         </div>
 
@@ -91,8 +90,8 @@ require_once __DIR__ . '/data.php';
                     </div>
                 </div>
             </div>
-            <div>
-                <button>Try our AI designtool</button>
+            <div class="buttonContainer">
+                <a href="#">Try our AI designtool</a>
             </div>
         </div>
 
@@ -108,8 +107,8 @@ require_once __DIR__ . '/data.php';
                     <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE 3D SHOE</p>
                 </div>
             </div>
-            <div>
-                <button>Button</button>
+            <div class="buttonContainer">
+                <a href="#">Button</a>
             </div>
         </div>
     </main>
