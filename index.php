@@ -25,7 +25,6 @@ require_once __DIR__ . '/data.php';
         </nav>
     </header>
     <main>
-
         <div class="heroContainer">
             <video autoplay loop muted>
                 <source src="image_video\cube_Video.mp4" type="video/mp4" />
@@ -41,23 +40,25 @@ require_once __DIR__ . '/data.php';
                     <a href="#">Read more about Bloom tech</a>
                 </div>
             </div>
-        </div>
-        <div class="heroBannerButton">
-            <a href=#mailForm>Become a part of our community</a>
+            <div class="heroBannerButton">
+                <a href=#mailForm>Become a part of our community</a>
+            </div>
         </div>
 
         <div class="productBanner">
             <div>
                 <h2>Explore our bloom technology</h2>
             </div>
+            <video autoplay loop muted>
+                <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
+            </video>
             <div>
-                <video autoplay loop muted>
-                    <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
-                </video>
                 <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE</p>
             </div>
-            <div class="buttonContainer">
-                <a href="#">Explore our process</a>
+            <div>
+                <div class="buttonContainer">
+                    <a href="#">Explore our process</a>
+                </div>
             </div>
         </div>
 
@@ -71,6 +72,11 @@ require_once __DIR__ . '/data.php';
                         <img src="<?php echo $card['imageUrl'] ?>" alt="A <?php echo $card['name'] ?>" />
                         <h3><?php echo $card['name'] ?></h3>
                         <p>899,00KR</p>
+                        <div class="colorButtons">
+                            <button></button>
+                            <button></button>
+                            <button></button>
+                        </div>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -83,21 +89,23 @@ require_once __DIR__ . '/data.php';
             <div>
                 <h2>Explore our bloom technology</h2>
             </div>
+            <video autoplay loop muted>
+                <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
+            </video>
             <div>
-                <video autoplay loop muted>
-                    <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
-                </video>
-                <div>
+                <div class="secondProductBannerDescription">
                     <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE 3D SHOE</p>
-                    <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                    <div class="colorButtons">
+                        <button></button>
+                        <button></button>
+                        <button></button>
                     </div>
                 </div>
             </div>
-            <div class="buttonContainer">
-                <a href="#">Try our AI designtool</a>
+            <div>
+                <div class="buttonContainer">
+                    <a href="#">Try our AI designtool</a>
+                </div>
             </div>
         </div>
 
@@ -105,16 +113,16 @@ require_once __DIR__ . '/data.php';
             <div>
                 <h2>Explore our bloom technology</h2>
             </div>
+            <video autoplay loop muted>
+                <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
+            </video>
             <div>
-                <video autoplay loop muted>
-                    <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
-                </video>
-                <div>
-                    <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE 3D SHOE</p>
-                </div>
+                <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE 3D SHOE</p>
             </div>
-            <div class="buttonContainer">
-                <a href="#">Button</a>
+            <div>
+                <div class="buttonContainer">
+                    <a href="#">Button</a>
+                </div>
             </div>
         </div>
     </main>
