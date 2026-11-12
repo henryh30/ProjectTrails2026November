@@ -62,7 +62,7 @@ require_once __DIR__ . '/data.php';
             </div>
         </div>
 
-        <div>
+        <div class="smallProductSection">
             <div>
                 <h2>New arrivals</h2>
             </div>
@@ -80,8 +80,10 @@ require_once __DIR__ . '/data.php';
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="buttonContainer">
-                <a href="#">Explore the whole collection</a>
+            <div class="productFlexButton">
+                <div class="buttonContainer">
+                    <a href="#">Explore the whole collection</a>
+                </div>
             </div>
         </div>
 
@@ -109,7 +111,7 @@ require_once __DIR__ . '/data.php';
             </div>
         </div>
 
-        <div class="productBanner">
+        <div class="productBanner finalProductBanner">
             <div>
                 <h2>Explore our bloom technology</h2>
             </div>

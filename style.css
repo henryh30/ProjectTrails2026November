@@ -24,6 +24,8 @@
   --websiteBoxGap: calc(96rem/16);
   --colorButtonRadius: calc(16rem/16);
 
+  --productCardsGridGap: calc(16rem/16);
+  --productCardFlexGap: calc(16rem/16);
   --productBannerGap: calc(16rem/16);
   --sidePadding: calc(16rem/16);
 }
@@ -213,6 +215,7 @@ main {
   display: inline-flex;
   flex-direction: column;
   gap: var(--productBannerGap);
+  padding: var(--sidePadding) 0;
 }
 
 .productBanner > div {
@@ -225,7 +228,31 @@ main {
   overflow: hidden;
 }
 
+.finalProductBanner {
+  background: #5c5c5c;
+}
+
 /* Styling of big product cards: End */
+
+/* Styling of small product card grid: Start*/
+
+.productCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--productCardsGridGap);
+}
+
+.productFlexButton {
+  display: flex;
+  justify-content: center;
+}
+
+.smallProductSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--productCardFlexGap);
+  padding: var(--sidePadding);
+}
 
 /* Cards with button to change color on product */
 .colorButtons > button {
