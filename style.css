@@ -14,6 +14,24 @@
   box-sizing: border-box;
 }
 
+/* Default: an 8px margin all the way round the page */
+body {
+  margin: 0;
+}
+
+/* Default: inline — it sits on the text line like a letter,
+   leaving a small gap underneath it */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Default: the system font, not the one you chose */
+button,
+input {
+  font: inherit;
+}
+
 a,
 button {
   text-decoration: none;
