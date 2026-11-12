@@ -142,31 +142,39 @@ require_once __DIR__ . '/data.php';
                 <button type="submit">Klicka för att gå med!</button>
             </form>
         </div>
-        <div>
-            <h4>Kontakt</h4>
-            <ul>
-                <p>ADRESS</p>
-                <li>SPÅRGATAN 12, 12345 SPÅR</li>
-                <p>E-POSTADRESS</p>
-                <li>SPÅR@SPÅR.CSE</li>
-                <p>TELEFON</p>
-                <li>123456789</li>
-            </ul>
-        </div>
-        <div>
-            <h4>Info</h4>
-            <div>
-                <a href="#">REFOUND POLICY</a>
-                <a href="#">SHIPPING</a>
-                <a href="#">FAQ</a>
+        <div class="bottomFooterSection">
+            <div class="firstFooterColumn">
+                <h4>Kontakt</h4>
+                <ul>
+                    <div>
+                        <p>ADRESS</p>
+                        <li>SPÅRGATAN 12, 12345 SPÅR</li>
+                    </div>
+                    <div>
+                        <p>E-POSTADRESS</p>
+                        <li>SPÅR@SPÅR.CSE</li>
+                    </div>
+                    <div>
+                        <p>TELEFON</p>
+                        <li>123456789</li>
+                    </div>
+                </ul>
             </div>
-        </div>
-        <div>
-            <h4>SOCIALA MEDIER</h4>
-            <div>
-                <a href="#">INSTAGRAM</a>
-                <a href="#">TIKTOK</a>
-                <a href="#">X</a>
+            <div class="footerColumn">
+                <h4>Info</h4>
+                <div class="linkList">
+                    <a href="#">REFOUND POLICY</a>
+                    <a href="#">SHIPPING</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+            <div class="footerColumn">
+                <h4>SOCIALA MEDIER</h4>
+                <div class="linkList">
+                    <a href="#">INSTAGRAM</a>
+                    <a href="#">TIKTOK</a>
+                    <a href="#">X</a>
+                </div>
             </div>
         </div>
     </footer>
