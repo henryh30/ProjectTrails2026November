@@ -13,7 +13,7 @@ require_once __DIR__ . '/data.php';
                     <span>/</span>
                     <a href="#">En</a>
                 </div>
-                <div>
+                <div class="navIcons">
                     <a href="#">
                         <img src="image_video\search_icon.png" alt="Sök ikon">
                     </a>
@@ -30,13 +30,19 @@ require_once __DIR__ . '/data.php';
             <video autoplay loop muted>
                 <source src="image_video\cube_Video.mp4" type="video/mp4" />
             </video>
-            <div>
-                <h1>NEW ARRIVALS</h1>
-                <p>EXPLORE OUR NEW EXCLUSIVE BLOOM DROP</p>
-                <a href="#">Read more about Bloom tech</a>
+            <div class="heroImageText">
+                <div>
+                    <div class="heroText">
+                        <h1>NEW ARRIVALS</h1>
+                        <p>EXPLORE OUR NEW EXCLUSIVE BLOOM DROP</p>
+                    </div>
+                </div>
+                <div class="heroImageButton">
+                    <a href="#">Read more about Bloom tech</a>
+                </div>
             </div>
         </div>
-        <div class="buttonContainer">
+        <div class="heroBannerButton">
             <a href=#mailForm>Become a part of our community</a>
         </div>
 
