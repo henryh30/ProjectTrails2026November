@@ -1,11 +1,18 @@
 :root {
-  --h1Size: calc(72rem/16);
-  --h2Size: calc(44rem/16);
-  --h3Size: calc(32rem/16);
+  --h1Size: calc(80rem/16);
+  --h2Size: calc(42rem/16);
+  --h3Size: calc(24rem/16);
   --h4Size: calc(24rem/16);
   --paragraphSize: calc(24rem/16);
-  --paragraphSmallSize: calc(16rem/16);
+  --paragraphSmallSize: calc(20rem/16);
   --buttonFontSize: calc(16rem/16);
+  --labelSize: calc(14rem/16);
+
+  --h1h2LineHeight: 110%;
+  --paragraphLetterSpacing: 10%;
+
+  --fontFamilyDMSans: "DM Sans";
+  --fontFamilyParagraph: "DM Mono";
 }
 
 *,
@@ -30,6 +37,38 @@ img {
 button,
 input {
   font: inherit;
+}
+h1,
+h2 {
+  line-height: var(--h1h2LineHeight);
+}
+
+h1,
+h2,
+h3,
+h4,
+button {
+  font-family: var(--fontFamilyDMSans);
+}
+
+p {
+  font-family: var(--fontFamilyParagraph);
+}
+
+h1 {
+  font-size: var(--h1Size);
+}
+
+h2 {
+  font-size: var(--h2Size);
+}
+
+h3 {
+  font-size: var(--h3Size);
+}
+
+h4 {
+  font-size: var(--h4Size);
 }
 
 a,
