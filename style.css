@@ -9,6 +9,8 @@
   --labelSize: calc(14rem/16);
 
   --h1h2LineHeight: 110%;
+  --defaultFontWeight: 400;
+  --semiBoldFontWeight: 600;
   --paragraphLetterSpacing: 10%;
 
   --fontFamilyDMSans: "DM Sans";
@@ -18,6 +20,12 @@
   --buttonColor: #000000;
 
   --heroMediaHeight: calc(690rem/16);
+  --bigProductCardHeight: calc(320rem/16);
+  --websiteBoxGap: calc(96rem/16);
+  --colorButtonRadius: calc(16rem/16);
+
+  --productBannerGap: calc(16rem/16);
+  --sidePadding: calc(16rem/16);
 }
 
 *,
@@ -48,6 +56,13 @@ input {
 h1,
 h2 {
   line-height: var(--h1h2LineHeight);
+  font-weight: var(--defaultFontWeight);
+}
+
+p,
+button,
+h3 {
+  font-weight: var(--defaultFontWeight);
 }
 
 h1,
@@ -78,6 +93,7 @@ h3 {
 
 h4 {
   font-size: var(--h4Size);
+  font-weight: var(--semiBoldFontWeight);
 }
 
 a,
@@ -86,6 +102,8 @@ button {
   font-size: var(--buttonFontSize);
   font-family: "DM Sans", sans-serif;
   color: white;
+  border: none;
+  appearance: none;
 }
 
 nav a {
@@ -112,6 +130,12 @@ nav > div {
   gap: calc(16rem / 16);
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--websiteBoxGap);
+}
+
 .navIcons {
   display: inline-flex;
   gap: calc(6rem / 16);
@@ -129,10 +153,10 @@ nav > div {
   overflow: hidden;
 }
 
-.heroImageText > div {
+.heroImageText > div:first-child {
   display: inline-flex;
   flex-direction: column;
-  margin: calc(32rem / 16) calc(16rem / 16);
+  margin: var(--sidePadding) var(--sidePadding);
 }
 
 .heroImageText {
@@ -148,6 +172,7 @@ nav > div {
 
 .heroImageButton {
   padding: calc(8rem / 16) calc(16rem / 16);
+  margin: 0 0 calc(64rem / 16) var(--sidePadding);
   background-color: var(--buttonColor);
   display: inline-block;
 }
@@ -165,5 +190,47 @@ nav > div {
 }
 /* End of hero section styling */
 .buttonContainer {
+  display: inline-block;
   padding: calc(8rem / 16) calc(16rem / 16);
+  background-color: var(--buttonColor);
+}
+
+.buttonContainer > a {
+  display: inline-block;
+}
+
+/* Styling of big product cards: Start*/
+
+.secondProductBannerDescription {
+  display: inline-flex;
+}
+.secondProductBannerDescription > div {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.productBanner {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--productBannerGap);
+}
+
+.productBanner > div {
+  margin-left: var(--sidePadding);
+}
+
+.productBanner > video {
+  height: var(--bigProductCardHeight);
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* Styling of big product cards: End */
+
+/* Cards with button to change color on product */
+.colorButtons > button {
+  display: inline-block;
+  border-radius: 50%;
+  width: var(--colorButtonRadius);
+  height: var(--colorButtonRadius);
 }
