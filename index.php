@@ -130,7 +130,7 @@ require_once __DIR__ . '/data.php';
     </main>
 
     <footer>
-        <div class="mailPanel">
+        <div class="mailPanel" id="mailForm">
             <h2>Ta del av vårat community</h2>
             <form action="" method="post">
                 <label for="email">E-postadress</label>
