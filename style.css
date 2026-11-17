@@ -25,6 +25,7 @@
   --bigProductCardHeight: calc(320rem/16);
   --websiteBoxGap: calc(96rem/16);
   --colorButtonRadius: calc(16rem/16);
+  --colorButtonBorderRadius: calc(18rem/16);
 
   --productCardsGridGap: calc(16rem/16);
   --productCardFlexGap: calc(16rem/16);
@@ -32,14 +33,16 @@
   --formFlexGap: calc(8rem/16);
   --productBannerGap: calc(16rem/16);
   --bottomFooterFlexGap: calc(24rem/16);
-  --linkListGap: calc(4rem/16);
+  --firstLinkBoxFlexGap: calc(4rem/16);
   --footerColumnFlexGap: calc(8rem/16);
   --firstFooterColumnFlexGap: calc(12rem/16);
+  --colorButtonFlexGap: calc(8rem/16);
 
   --sideWaysPadding: calc(16rem/16);
   --sideWaysButtonPadding: calc(16rem/16);
   --upDownFormPadding: calc(32rem/16);
   --downBottomFooterPadding: calc(32rem/16);
+  --accordionPadding: calc(16rem/16);
 }
 
 *,
@@ -122,28 +125,9 @@ button {
   appearance: none;
 }
 
-nav a {
-  color: black;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: calc(16rem / 16) calc(16rem / 16);
-  background-color: var(--navColor);
-}
-
 video {
   max-width: 100%;
   max-height: 100%;
-}
-
-nav > div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: calc(16rem / 16);
 }
 
 main {
@@ -158,9 +142,41 @@ li {
   font-size: var(--paragraphSmallSize);
 }
 
+/* Styling of nav: Start */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav a {
+  color: black;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(12rem / 16) calc(16rem / 16);
+  background-color: var(--navColor);
+}
+nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(16rem / 16);
+}
+
+nav > a {
+  max-width: 25%;
+}
+
 .navIcons {
   display: inline-flex;
   gap: calc(6rem / 16);
+  align-items: center;
+  justify-content: center;
 }
 
 /* Hero section styling: Start*/
@@ -178,7 +194,7 @@ li {
 .heroImageText > div:first-child {
   display: inline-flex;
   flex-direction: column;
-  margin: var(--sideWaysPadding) var(--sideWaysPadding);
+  margin: calc(64rem / 16) var(--sideWaysPadding);
 }
 
 .heroImageText {
@@ -225,6 +241,7 @@ li {
 
 .secondProductBannerDescription {
   display: inline-flex;
+  gap: calc(20rem / 16);
 }
 .secondProductBannerDescription > div {
   display: inline-flex;
@@ -239,7 +256,7 @@ li {
 }
 
 .productBanner > div {
-  margin-left: var(--sideWaysPadding);
+  padding: 0 var(--sideWaysPadding);
 }
 
 .productBanner > video {
@@ -250,7 +267,17 @@ li {
 
 .finalProductBanner {
   background: #5c5c5c;
-  margin-bottom: var(--websiteBoxGap);
+}
+
+.accordions > div {
+  display: flex;
+  padding: var(--accordionPadding) var(--accordionPadding);
+  justify-content: space-between;
+  border-bottom: solid calc(1rem / 16) black;
+}
+
+.accordions button {
+  background: none;
 }
 
 /* Styling of big product cards: End */
@@ -277,6 +304,34 @@ li {
 
 /* Styling of small product card grid: End */
 
+/* Styling of social media carousel: Start */
+
+.socialMediaPictures {
+  display: flex;
+  flex-direction: column;
+  gap: calc(16rem / 16);
+  padding: 0 calc(16rem / 16);
+  margin-bottom: var(--websiteBoxGap);
+}
+
+.socialMediaCarousel {
+  display: flex;
+  gap: calc(16rem / 16);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.socialMediaCarousel::-webkit-scrollbar {
+  display: none;
+}
+
+.socialMediaCarousel > img {
+  flex: 0 0 calc(233rem / 16);
+}
+
+/*Styling of social media carousel: End */
 /* Styling of footer and form: Start*/
 
 footer {
@@ -297,19 +352,19 @@ footer button {
   border-bottom: solid calc(1rem / 16);
 }
 
-.mailPanel > form {
-  display: inline-flex;
+.mailForm {
+  display: flex;
   flex-direction: column;
   gap: var(--formFlexGap);
 }
 
-.mailPanel button {
+.mailForm button {
   background: var(--buttonColor);
-  padding: var(--sideWaysButtonPadding) var(--sideWaysButtonPadding);
+  padding: calc(8rem / 16) var(--sideWaysButtonPadding);
   color: var(--buttonTextColor);
 }
 
-.mailPanel input {
+.mailForm input {
   padding: var(--sideWaysPadding) var(--sideWaysPadding);
 }
 
@@ -349,19 +404,39 @@ footer button {
 .firstFooterColumn > ul > div {
   display: flex;
   flex-direction: column;
-  gap: var(--linkListGap);
+  gap: var(--firstLinkBoxFlexGap);
 }
 
 .linkList {
   display: flex;
   flex-direction: column;
-  gap: var(--linkListGap);
+  gap: var(--firstLinkBoxFlexGap);
 }
 
 /* Cards with button to change color on product */
+
+.colorButtons {
+  display: inline-flex;
+  gap: var(--colorButtonFlexGap);
+}
+
+/*.colorButtons > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--colorButtonBorderRadius);
+  width: var(--colorButtonBorderRadius);
+  border: solid #000000 calc(1rem / 16);
+  border-radius: calc(16rem / 16);
+} */
+
 .colorButtons > button {
   display: inline-block;
-  border-radius: 50%;
+  border-radius: calc(16rem / 16);
   width: var(--colorButtonRadius);
   height: var(--colorButtonRadius);
+  padding: 0;
+  background-color: #000000;
+  outline: calc(1rem / 16) solid #000000;
+  outline-offset: calc(1rem / 16);
 }

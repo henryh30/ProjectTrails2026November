@@ -6,7 +6,9 @@ require_once __DIR__ . '/data.php';
 <body>
     <header>
         <nav>
-            <a href="index.html">Spår</a>
+            <a href="index.html">
+                <img src="image_video\logo_hel.svg" alt="spar, english trails" />
+            </a>
             <div>
                 <div>
                     <a href="#">Sv</a>
@@ -15,10 +17,10 @@ require_once __DIR__ . '/data.php';
                 </div>
                 <div class="navIcons">
                     <a href="#">
-                        <img src="image_video\search_icon.png" alt="Sök ikon">
+                        <img src="image_video\searchIcon.svg" alt="Search icom">
                     </a>
                     <a href="#">
-                        <img src="image_video\hamburger_icon.png" alt="Hamburgare ikon">
+                        <img src="image_video\Menu button.svg" alt="Hamburger menu ikon">
                     </a>
                 </div>
             </div>
@@ -105,8 +107,12 @@ require_once __DIR__ . '/data.php';
                 </div>
             </div>
             <div>
-                <div class="buttonContainer">
-                    <a href="#">Try our AI designtool</a>
+                <div>
+                    <form class="mailForm" action="index.php" method="post" enctype="multipart/form-data">
+                        <label for="mail">E-postadress</label>
+                        <input type="mail" name="mail" id="mail" placeholder="example@email.com" required>
+                        <button type="submit">Save your personal style</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -118,8 +124,31 @@ require_once __DIR__ . '/data.php';
             <video autoplay loop muted>
                 <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
             </video>
-            <div>
-                <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE 3D SHOE</p>
+            <div class="accordions">
+                <div>
+                    <h3>Steg 1: Rubrik</h3>
+                    <button>
+                        <img src="image_video\plusIcon.svg" alt="Stage one read more" />
+                    </button>
+                </div>
+                <div>
+                    <h3>Steg 2: Rubrik</h3>
+                    <button>
+                        <img src="image_video\plusIcon.svg" alt="Stage two read more" />
+                    </button>
+                </div>
+                <div>
+                    <h3>Steg 3: Rubrik</h3>
+                    <button>
+                        <img src="image_video\plusIcon.svg" alt="Stage three read more" />
+                    </button>
+                </div>
+                <div>
+                    <h3>Steg 4: Rubrik</h3>
+                    <button>
+                        <img src="image_video\plusIcon.svg" alt="Stage four read more" />
+                    </button>
+                </div>
             </div>
             <div>
                 <div class="buttonContainer">
@@ -127,18 +156,28 @@ require_once __DIR__ . '/data.php';
                 </div>
             </div>
         </div>
+
+        <div class="socialMediaPictures">
+            <h2>Sociala medier</h2>'
+            <div class="socialMediaCarousel">
+                <img src="image_video/placeHolder.png" />
+                <img src="image_video/placeHolder.png" />
+                <img src="image_video/placeHolder.png" />
+                <img src="image_video/placeHolder.png" />
+            </div>'
+        </div>
     </main>
 
     <footer>
-        <div class="mailPanel" id="mailForm">
+        <div class="mailPanel" id="mailFormFooter">
             <h2>Ta del av vårat community</h2>
-            <form action="" method="post">
+            <form class="mailForm" action="" method="post">
                 <label for="email">E-postadress</label>
                 <input
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="example@meail.com" />
+                    placeholder="example@meail.com" required />
                 <button type="submit">Klicka för att gå med!</button>
             </form>
         </div>
