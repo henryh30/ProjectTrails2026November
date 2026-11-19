@@ -16,12 +16,12 @@ require_once __DIR__ . '/data.php';
                     <a href="#">En</a>
                 </div>
                 <div class="navIcons">
-                    <a href="#">
+                    <button>
                         <img src="image_video\searchIcon.svg" alt="Search icom">
-                    </a>
-                    <a href="#">
+                    </button>
+                    <button>
                         <img src="image_video\Menu button.svg" alt="Hamburger menu ikon">
-                    </a>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -34,12 +34,14 @@ require_once __DIR__ . '/data.php';
             <div class="heroImageText">
                 <div>
                     <div class="heroText">
-                        <h1>NEW ARRIVALS</h1>
-                        <p>EXPLORE OUR NEW EXCLUSIVE BLOOM DROP</p>
+                        <h1>Carve your path</h1>
+                        <p>OUR FIRST DROP. SHOES AND ACCESSORIES MADE WITH ALGAE FROM SWEDISH WATERS.</p>
                     </div>
-                </div>
-                <div class="heroImageButton">
-                    <a href="#">Read more about Bloom tech</a>
+                    <div>
+                        <div class="heroImageButton">
+                            <a href="#">See our collection</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="heroBannerButton">
@@ -54,12 +56,14 @@ require_once __DIR__ . '/data.php';
             <video autoplay loop muted>
                 <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
             </video>
-            <div>
-                <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE</p>
-            </div>
-            <div>
-                <div class="buttonContainer">
-                    <a href="#">Explore our process</a>
+            <div class="productBannerDescription">
+                <div>
+                    <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE</p>
+                </div>
+                <div>
+                    <div class="buttonContainer">
+                        <a href="#">Explore our process</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,8 +76,10 @@ require_once __DIR__ . '/data.php';
                 <?php foreach ($productCards as $card) : ?>
                     <div class="card">
                         <img src="<?php echo $card['imageUrl'] ?>" alt="A <?php echo $card['name'] ?>" />
-                        <h3><?php echo $card['name'] ?></h3>
-                        <p>899,00KR</p>
+                        <div>
+                            <h3><?php echo $card['name'] ?></h3>
+                            <p>899,00KR</p>
+                        </div>
                         <div class="colorButtons">
                             <button></button>
                             <button></button>
@@ -89,7 +95,7 @@ require_once __DIR__ . '/data.php';
             </div>
         </div>
 
-        <div class="productBanner">
+        <div class="productBanner secondBanner">
             <div>
                 <h2>Explore our bloom technology</h2>
             </div>
@@ -105,14 +111,14 @@ require_once __DIR__ . '/data.php';
                         <button></button>
                     </div>
                 </div>
-            </div>
-            <div>
                 <div>
-                    <form class="mailForm" action="index.php" method="post" enctype="multipart/form-data">
-                        <label for="mail">E-postadress</label>
-                        <input type="mail" name="mail" id="mail" placeholder="example@email.com" required>
-                        <button type="submit">Save your personal style</button>
-                    </form>
+                    <div>
+                        <form class="mailForm" action="index.php" method="post" enctype="multipart/form-data">
+                            <label for="mail">E-postadress</label>
+                            <input type="mail" name="mail" id="mail" placeholder="example@email.com" required>
+                            <button type="submit">Save your personal style</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -124,35 +130,37 @@ require_once __DIR__ . '/data.php';
             <video autoplay loop muted>
                 <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
             </video>
-            <div class="accordions">
-                <div>
-                    <h3>Steg 1: Rubrik</h3>
-                    <button>
-                        <img src="image_video\plusIcon.svg" alt="Stage one read more" />
-                    </button>
-                </div>
-                <div>
-                    <h3>Steg 2: Rubrik</h3>
-                    <button>
-                        <img src="image_video\plusIcon.svg" alt="Stage two read more" />
-                    </button>
-                </div>
-                <div>
-                    <h3>Steg 3: Rubrik</h3>
-                    <button>
-                        <img src="image_video\plusIcon.svg" alt="Stage three read more" />
-                    </button>
-                </div>
-                <div>
-                    <h3>Steg 4: Rubrik</h3>
-                    <button>
-                        <img src="image_video\plusIcon.svg" alt="Stage four read more" />
-                    </button>
-                </div>
-            </div>
             <div>
-                <div class="buttonContainer">
-                    <a href="#">Button</a>
+                <div class="accordions">
+                    <div>
+                        <h3>Steg 1: Rubrik</h3>
+                        <button>
+                            <img src="image_video\plusIcon.svg" alt="Stage one read more" />
+                        </button>
+                    </div>
+                    <div>
+                        <h3>Steg 2: Rubrik</h3>
+                        <button>
+                            <img src="image_video\plusIcon.svg" alt="Stage two read more" />
+                        </button>
+                    </div>
+                    <div>
+                        <h3>Steg 3: Rubrik</h3>
+                        <button>
+                            <img src="image_video\plusIcon.svg" alt="Stage three read more" />
+                        </button>
+                    </div>
+                    <div>
+                        <h3>Steg 4: Rubrik</h3>
+                        <button>
+                            <img src="image_video\plusIcon.svg" alt="Stage four read more" />
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="buttonContainer">
+                        <a href="#">Button</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -170,16 +178,21 @@ require_once __DIR__ . '/data.php';
 
     <footer>
         <div class="mailPanel" id="mailFormFooter">
-            <h2>Ta del av vårat community</h2>
-            <form class="mailForm" action="" method="post">
-                <label for="email">E-postadress</label>
-                <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="example@meail.com" required />
-                <button type="submit">Klicka för att gå med!</button>
-            </form>
+            <div>
+                <h2>Ta del av vårat community</h2>
+                <form class="mailForm" action="" method="post">
+                    <label for="email">E-postadress</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="example@mail.com" required />
+                    <button type="submit">Klicka för att gå med!</button>
+                </form>
+            </div>
+            <div>
+                <img src="image_video/logo_hel.svg" alt="Spår logo, english trails logo" />
+            </div>
         </div>
         <div class="bottomFooterSection">
             <div class="firstFooterColumn">
