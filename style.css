@@ -10,6 +10,7 @@
 
   --h1h2LineHeight: 110%;
   --defaultFontWeight: 400;
+  --mediumFontWeight: 500;
   --semiBoldFontWeight: 600;
   --paragraphLetterSpacing: 10%;
 
@@ -50,6 +51,10 @@
 *::after {
   box-sizing: border-box;
 }
+
+/* Media query of desktop version: Start */
+
+/* Media query of desktop version: End*/
 
 /* Default: an 8px margin all the way round the page */
 body {
@@ -169,7 +174,12 @@ nav > div {
 }
 
 nav > a {
-  max-width: 25%;
+  max-width: calc(136rem / 16);
+  max-height: calc(54rem / 16);
+}
+
+nav button {
+  background: none;
 }
 
 .navIcons {
@@ -194,23 +204,25 @@ nav > a {
 .heroImageText > div:first-child {
   display: inline-flex;
   flex-direction: column;
-  margin: calc(64rem / 16) var(--sideWaysPadding);
+  /*margin: calc(64rem / 16) var(--sideWaysPadding);*/
 }
 
 .heroImageText {
   position: absolute;
   left: 0;
   bottom: 0;
+  padding: calc(96rem / 16) var(--sideWaysPadding);
 }
 .heroText {
   display: inline-flex;
   flex-direction: column;
   gap: calc(16rem / 16);
+  margin-bottom: calc(16rem / 16);
 }
 
 .heroImageButton {
   padding: calc(8rem / 16) calc(16rem / 16);
-  margin: 0 0 calc(64rem / 16) var(--sideWaysPadding);
+  /*margin: 0 0 calc(64rem / 16) var(--sideWaysPadding); */
   background-color: var(--buttonColor);
   display: inline-block;
 }
@@ -248,6 +260,17 @@ nav > a {
   justify-content: center;
 }
 
+.secondBanner > div:last-child > div:first-child {
+  display: inline-flex;
+  gap: calc(20rem / 16);
+}
+
+.secondBanner > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: calc(24rem / 16);
+}
+
 .productBanner {
   display: inline-flex;
   flex-direction: column;
@@ -259,10 +282,16 @@ nav > a {
   padding: 0 var(--sideWaysPadding);
 }
 
-.productBanner > video {
+.productBanner video {
   height: var(--bigProductCardHeight);
   object-fit: cover;
   overflow: hidden;
+}
+
+.productBannerDescription {
+  display: inline-flex;
+  flex-direction: column;
+  gap: calc(24rem / 16);
 }
 
 .finalProductBanner {
@@ -276,8 +305,19 @@ nav > a {
   border-bottom: solid calc(1rem / 16) black;
 }
 
+.finalProductBanner > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: calc(24rem / 16);
+}
+
 .accordions button {
   background: none;
+}
+
+.finalProductBanner video {
+  width: 100%;
+  height: 100%;
 }
 
 /* Styling of big product cards: End */
@@ -285,9 +325,21 @@ nav > a {
 /* Styling of small product card grid: Start*/
 
 .productCards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  /*grid-template-columns: repeat(2, 1fr); */
   gap: var(--productCardsGridGap);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: calc(8rem / 16);
+  min-height: calc(302rem / 16);
+}
+
+.card > img {
+  min-height: calc(214rem / 16);
 }
 
 .productFlexButton {
@@ -342,6 +394,16 @@ footer button {
   color: #000000;
 }
 
+label {
+  font-size: var(--labelSize);
+  font-weight: var(--mediumFontWeight);
+}
+
+input::placeholder {
+  font-size: var(--buttonFontSize);
+  font-style: italic;
+}
+
 .mailPanel {
   display: flex;
   flex-direction: column;
@@ -356,6 +418,17 @@ footer button {
   display: flex;
   flex-direction: column;
   gap: var(--formFlexGap);
+}
+
+.mailPanel > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: var(--formFlexGap);
+}
+
+#mailFormFooter img {
+  width: 100%;
+  height: 100%;
 }
 
 .mailForm button {
@@ -428,7 +501,7 @@ footer button {
   width: var(--colorButtonBorderRadius);
   border: solid #000000 calc(1rem / 16);
   border-radius: calc(16rem / 16);
-} */
+  } */
 
 .colorButtons > button {
   display: inline-block;
@@ -439,4 +512,136 @@ footer button {
   background-color: #000000;
   outline: calc(1rem / 16) solid #000000;
   outline-offset: calc(1rem / 16);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --heroMediaHeight: calc(810rem/16);
+  }
+  .heroImageText {
+    padding: calc(128rem / 16) calc(96rem / 16);
+  }
+
+  .productBanner video {
+    max-width: calc(816rem / 16);
+    max-height: calc(652rem / 16);
+  }
+  /*
+  .productBanner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 calc(16rem / 16);
+    }
+
+  .productBanner > div {
+    padding: 0;
+    grid-column: 2;
+    }
+    
+    .productBanner > video {
+      grid-column: 1;
+      grid-row: 1/3;
+      width: 100%;
+      }
+      
+      .productBanner > div:first-child {
+        grid-row: 1;
+        }
+        
+        .productBanner > div:last-child {
+    grid-row: 2;
+  } */
+  .productBanner {
+    display: grid;
+    grid-template-areas:
+      "video video video header"
+      "video  video video paragraph"
+      "video video video empty";
+
+    padding-left: var(--sideWaysPadding);
+  }
+
+  .productBanner > video {
+    width: 100%;
+    height: 100%;
+    grid-area: video;
+  }
+
+  .productBanner > div:first-child {
+    grid-area: header;
+  }
+
+  .productBanner > div:last-child {
+    grid-area: paragraph;
+  }
+
+  .secondBanner > div:last-child {
+    justify-content: space-between;
+    gap: calc(128rem / 16);
+  }
+
+  .secondBanner > div:last-child > div:first-child {
+    flex-direction: column;
+  }
+
+  .secondBanner .colorButtons {
+    justify-content: start;
+  }
+
+  .secondBanner {
+    display: grid;
+    grid-template-areas:
+      "header video video video"
+      "paragraph video video video"
+      "empty video video video";
+  }
+
+  .finalProductBanner {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "video accordion"
+      "video empty"
+      "video empty";
+    gap: calc(16rem / 16);
+  }
+
+  .finalProductBanner > div:first-child {
+    display: inline-flex;
+    flex-direction: column;
+    gap: calc(24rem / 16);
+    grid-area: video;
+    padding: 0;
+  }
+
+  .finalProductBanner > div:first-child {
+    grid-area: header;
+  }
+
+  .finalProductBanner > div:last-child {
+    grid-area: accordion;
+  }
+
+  .accordions > div {
+    gap: calc(196rem / 16);
+  }
+
+  #mailFormFooter {
+    display: flex;
+    gap: calc(160rem / 16);
+  }
+
+  #mailFormFooter > div:last-child {
+    max-height: calc(232rem / 16);
+  }
+
+  .mailPanel {
+    flex-direction: row;
+  }
+
+  .bottomFooterSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
