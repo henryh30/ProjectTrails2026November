@@ -19,12 +19,21 @@ require_once __DIR__ . '/data.php';
                     <button>
                         <img src="image_video\searchIcon.svg" alt="Search icom">
                     </button>
-                    <button>
+                    <button id="hamburgerMenu">
                         <img src="image_video\Menu button.svg" alt="Hamburger menu ikon">
                     </button>
                 </div>
             </div>
         </nav>
+        <div class="openedMenu inActive">
+            <div class="activatedNavMenu">
+                <h2>New arrivals</h2>
+                <h2>Bloom collection</h2>
+                <h2>Bloom technology</h2>
+                <h2>Sustainability</h2>
+                <h2>Community</h2>
+            </div>
+        </div>
     </header>
     <main>
         <div class="heroContainer">
@@ -51,18 +60,18 @@ require_once __DIR__ . '/data.php';
 
         <div class="productBanner">
             <div>
-                <h2>Explore our bloom technology</h2>
+                <h2>FROM ALGAE TO SHOE</h2>
             </div>
             <video autoplay loop muted>
                 <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
             </video>
             <div class="productBannerDescription">
                 <div>
-                    <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE</p>
+                    <p>OUR SOLES ARE MADE FROM ALGAE CLEARED OUT OF OVERGROWN SWEDISH LAKES.</p>
                 </div>
                 <div>
                     <div class="buttonContainer">
-                        <a href="#">Explore our process</a>
+                        <a href="#">See how it's made</a>
                     </div>
                 </div>
             </div>
@@ -70,12 +79,14 @@ require_once __DIR__ . '/data.php';
 
         <div class="smallProductSection">
             <div>
-                <h2>New arrivals</h2>
+                <h2>The Bloom collection</h2>
             </div>
             <div class="productCards">
                 <?php foreach ($productCards as $card) : ?>
                     <div class="card">
-                        <img src="<?php echo $card['imageUrl'] ?>" alt="A <?php echo $card['name'] ?>" />
+                        <div>
+                            <img src="<?php echo $card['imageUrl'] ?>" alt="A <?php echo $card['name'] ?>" />
+                        </div>
                         <div>
                             <h3><?php echo $card['name'] ?></h3>
                             <p>899,00KR</p>
@@ -97,14 +108,14 @@ require_once __DIR__ . '/data.php';
 
         <div class="productBanner secondBanner">
             <div>
-                <h2>Explore our bloom technology</h2>
+                <h2>MAKE IT YOUR OWN</h2>
             </div>
             <video autoplay loop muted>
                 <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
             </video>
             <div>
                 <div class="secondProductBannerDescription">
-                    <p>READ ABOUT OUR BLOOM TECH FROM SWEDISH RIVER ALGAE EXPLORE 3D SHOE</p>
+                    <p>PICK A COLOUR FOR YOUR BLOOM KEYCHAIN AND SEE HOW IT LOOKS IN REAL LIFE.</p>
                     <div class="colorButtons">
                         <button></button>
                         <button></button>
@@ -114,9 +125,9 @@ require_once __DIR__ . '/data.php';
                 <div>
                     <div>
                         <form class="mailForm" action="index.php" method="post" enctype="multipart/form-data">
-                            <label for="mail">E-postadress</label>
+                            <label for="mail">Email address</label>
                             <input type="mail" name="mail" id="mail" placeholder="example@email.com" required>
-                            <button type="submit">Save your personal style</button>
+                            <button type="submit">Save my style</button>
                         </form>
                     </div>
                 </div>
@@ -125,36 +136,64 @@ require_once __DIR__ . '/data.php';
 
         <div class="productBanner finalProductBanner">
             <div>
-                <h2>Explore our bloom technology</h2>
+                <h2>SUSTAINABILITY</h2>
             </div>
             <video autoplay loop muted>
                 <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
             </video>
             <div>
                 <div class="accordions">
-                    <div>
-                        <h3>Steg 1: Rubrik</h3>
-                        <button>
-                            <img src="image_video\plusIcon.svg" alt="Stage one read more" />
-                        </button>
+                    <div class="inActive">
+                        <div>
+                            <h3>Steg 1: Rubrik</h3>
+                            <button>
+                                <img src="image_video\plusIcon.svg" alt="Stage one read more" />
+                            </button>
+                        </div>
+                        <div>
+                            <div>
+                                <p>Lorum ipsum</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Steg 2: Rubrik</h3>
-                        <button>
-                            <img src="image_video\plusIcon.svg" alt="Stage two read more" />
-                        </button>
+                    <div class="inActive">
+                        <div>
+                            <h3>Steg 2: Rubrik</h3>
+                            <button>
+                                <img src="image_video\plusIcon.svg" alt="Stage two read more" />
+                            </button>
+                        </div>
+                        <div>
+                            <div>
+                                <p>Lorum ipsum</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Steg 3: Rubrik</h3>
-                        <button>
-                            <img src="image_video\plusIcon.svg" alt="Stage three read more" />
-                        </button>
+                    <div class="inActive">
+                        <div>
+                            <h3>Steg 3: Rubrik</h3>
+                            <button>
+                                <img src="image_video\plusIcon.svg" alt="Stage three read more" />
+                            </button>
+                        </div>
+                        <div>
+                            <div>
+                                <p>Lorum ipsum</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Steg 4: Rubrik</h3>
-                        <button>
-                            <img src="image_video\plusIcon.svg" alt="Stage four read more" />
-                        </button>
+                    <div class="inActive">
+                        <div>
+                            <h3>Steg 4: Rubrik</h3>
+                            <button>
+                                <img src="image_video\plusIcon.svg" alt="Stage four read more" />
+                            </button>
+                        </div>
+                        <div>
+                            <div>
+                                <p>Lorum ipsum</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div>
