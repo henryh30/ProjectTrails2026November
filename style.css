@@ -17,7 +17,7 @@
   --fontFamilyDMSans: "DM Sans";
   --fontFamilyParagraph: "DM Mono";
 
-  --navColor: #cacaca;
+  --navColor: #fefff8;
   --buttonColor: #000000;
   --backgroundForm: #ececec;
   --buttonTextColor: #ffffff;
@@ -182,6 +182,24 @@ nav button {
   background: none;
 }
 
+.openedMenu {
+  position: absolute;
+  background: var(--navColor);
+  z-index: 1;
+  width: 100%;
+}
+
+.inActive > div {
+  display: none;
+}
+
+.activatedNavMenu {
+  display: flex;
+  flex-direction: column;
+  gap: calc(16rem / 16);
+  padding: calc(48rem / 16);
+}
+
 .navIcons {
   display: inline-flex;
   gap: calc(6rem / 16);
@@ -204,6 +222,10 @@ nav button {
 .heroImageText > div:first-child {
   display: inline-flex;
   flex-direction: column;
+
+  .heroContainer p {
+    color: white;
+  }
   /*margin: calc(64rem / 16) var(--sideWaysPadding);*/
 }
 
@@ -295,14 +317,24 @@ nav button {
 }
 
 .finalProductBanner {
-  background: #5c5c5c;
+  background: #787878;
 }
 
 .accordions > div {
   display: flex;
+  flex-direction: column;
+}
+
+.accordions > div > div:first-child {
+  display: flex;
   padding: var(--accordionPadding) var(--accordionPadding);
   justify-content: space-between;
   border-bottom: solid calc(1rem / 16) black;
+  position: relative;
+}
+
+.accordions > div > div:last-child {
+  padding: calc(16rem / 16) calc(16rem / 16);
 }
 
 .finalProductBanner > div:last-child {
@@ -313,6 +345,10 @@ nav button {
 
 .accordions button {
   background: none;
+}
+
+.accordions p {
+  font-size: var(--paragraphSmallSize);
 }
 
 .finalProductBanner video {
@@ -338,8 +374,15 @@ nav button {
   min-height: calc(302rem / 16);
 }
 
-.card > img {
+.card > div:first-child {
   min-height: calc(214rem / 16);
+  min-width: calc(168rem / 16);
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .productFlexButton {
@@ -567,6 +610,27 @@ input::placeholder {
     grid-area: video;
   }
 
+  video {
+    min-height: calc(652rem / 16);
+    min-width: calc(816rem / 16);
+  }
+
+  .card {
+    min-height: calc(706rem / 16);
+    min-width: calc(340rem / 16);
+  }
+
+  .card > div:first-child {
+    min-height: calc(604rem / 16);
+    min-width: calc(304rem / 16);
+  }
+
+  .card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
   .productBanner > div:first-child {
     grid-area: header;
   }
@@ -591,9 +655,9 @@ input::placeholder {
   .secondBanner {
     display: grid;
     grid-template-areas:
-      "header video video video"
-      "paragraph video video video"
-      "empty video video video";
+      "header video"
+      "paragraph video"
+      "paragraph video";
   }
 
   .finalProductBanner {
@@ -622,10 +686,6 @@ input::placeholder {
     grid-area: accordion;
   }
 
-  .accordions > div {
-    gap: calc(196rem / 16);
-  }
-
   #mailFormFooter {
     display: flex;
     gap: calc(160rem / 16);
@@ -643,5 +703,19 @@ input::placeholder {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @media (min-width: 1441px) {
+    :root {
+      --heroMediaHeight: calc(1200rem/16);
+    }
+
+    .card {
+      min-width: 24%;
+    }
+
+    video {
+      min-width: calc(900rem / 16);
+    }
   }
 }
