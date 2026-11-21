@@ -1,3 +1,5 @@
+const spiningImageArray = ["image_video\shoe_turntable_1630x1304.webm"];
+
 const hambugerMenu = document.querySelector("#hamburgerMenu");
 hambugerMenu.addEventListener("click", (event) => {
   const navMenuExtender = document.querySelector(".openedMenu");

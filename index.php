@@ -63,7 +63,7 @@ require_once __DIR__ . '/data.php';
                 <h2>FROM ALGAE TO SHOE</h2>
             </div>
             <video autoplay loop muted>
-                <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
+                <source src="image_video\shoe_turntable_1630x1304.webm" tyoe="video/webm">
             </video>
             <div class="productBannerDescription">
                 <div>
@@ -139,7 +139,7 @@ require_once __DIR__ . '/data.php';
                 <h2>SUSTAINABILITY</h2>
             </div>
             <video autoplay loop muted>
-                <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
+                <source src="image_video\BLOOM_B28_SPAR_BRAND_LANDING.mp4" tyoe="video/mp4">
             </video>
             <div>
                 <div class="accordions">
