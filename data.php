@@ -1,19 +1,27 @@
 <?php
 $productCards = [
     [
-        'name' => "Key chain",
-        'imageUrl' => "image_video\Keychain_171_214.png"
+        'name' => "Bloom shoe",
+        'imageUrl' => "image_video\sko 1.png",
+        'price' => "1,499 SEK",
+        'hasVariant' => true,
     ],
     [
-        'name' => "Ring",
-        'imageUrl' => "image_video\Ring_171_214.png"
+        'name' => "Bloom bottle",
+        'imageUrl' => "image_video\\flaska 1.png",
+        'price' => "899 SEK",
+        'hasVariant' => true,
     ],
     [
-        'name' => "placeHolder",
-        'imageUrl' => "image_video\placeHolder.png"
+        'name' => "Bloom keychain",
+        'imageUrl' => "image_video\Keychain 1.png",
+        'price' => "349 SEK",
+        'hasVariant' => false,
     ],
     [
-        'name' => "placeHolder",
-        'imageUrl' => "image_video\placeHolder.png"
-    ]
+        'name' => "Bloom ring",
+        'imageUrl' => "image_video\Ring 1.png",
+        'price' => "149 SEK",
+        'hasVariant' => false,
+    ],
 ];
