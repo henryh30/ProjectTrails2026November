@@ -17,10 +17,17 @@
   --fontFamilyDMSans: "DM Sans";
   --fontFamilyParagraph: "DM Mono";
 
+  --h1Color: #e4ff76;
+  --CTAColor: #e4ff76;
   --navColor: #fefff8;
   --buttonColor: #000000;
   --backgroundForm: #ececec;
-  --buttonTextColor: #ffffff;
+  --buttonTextColor: var(--backgroundColor);
+  --backgroundColor: #fefff8;
+
+  --lifeStyleBlack: #000000;
+  --lifeStyleBrown: #1a0d02;
+  --lifeStyleYellow: #e4ff76;
 
   --heroMediaHeight: calc(690rem/16);
   --bigProductCardHeight: calc(320rem/16);
@@ -44,6 +51,21 @@
   --upDownFormPadding: calc(32rem/16);
   --downBottomFooterPadding: calc(32rem/16);
   --accordionPadding: calc(16rem/16);
+}
+
+@keyframes fallDown {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 50%;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
 }
 
 *,
@@ -105,6 +127,7 @@ p {
 h1 {
   font-size: var(--h1Size);
   margin: 0;
+  color: var(--h1Color);
 }
 
 h2 {
@@ -139,6 +162,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--websiteBoxGap);
+  background-color: var(--backgroundColor);
 }
 
 li {
@@ -198,6 +222,8 @@ nav button {
   flex-direction: column;
   gap: calc(16rem / 16);
   padding: calc(48rem / 16);
+  animation: fallDown;
+  animation-fill-mode: forwards;
 }
 
 .navIcons {
@@ -213,6 +239,12 @@ nav button {
   min-height: var(--heroMediaHeight);
 }
 
+.heroContainer > img {
+  height: var(--heroMediaHeight);
+  object-fit: cover;
+  overflow: hidden;
+}
+
 .heroContainer > video {
   height: var(--heroMediaHeight);
   object-fit: cover;
@@ -222,10 +254,10 @@ nav button {
 .heroImageText > div:first-child {
   display: inline-flex;
   flex-direction: column;
+}
 
-  .heroContainer p {
-    color: white;
-  }
+.heroContainer p {
+  color: white;
   /*margin: calc(64rem / 16) var(--sideWaysPadding);*/
 }
 
@@ -259,6 +291,7 @@ nav button {
   align-items: center;
   border-top: solid calc(1rem / 16) var(--buttonColor);
   border-bottom: solid calc(1rem / 16) var(--buttonColor);
+  background-color: var(--CTAColor);
 }
 /* End of hero section styling */
 .buttonContainer {
@@ -310,6 +343,10 @@ nav button {
   overflow: hidden;
 }
 
+.firstBanner video {
+  object-fit: contain;
+}
+
 .productBannerDescription {
   display: inline-flex;
   flex-direction: column;
@@ -317,7 +354,7 @@ nav button {
 }
 
 .finalProductBanner {
-  background: #787878;
+  background: var(--h1Color);
 }
 
 .accordions > div {
@@ -379,8 +416,12 @@ nav button {
   min-width: calc(168rem / 16);
 }
 
+.card p {
+  font-size: var(--paragraphSmallSize);
+}
+
 .card img {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   height: 100%;
 }
@@ -474,6 +515,10 @@ input::placeholder {
   height: 100%;
 }
 
+#mailFormFooter button {
+  color: var(--h1Color);
+}
+
 .mailForm button {
   background: var(--buttonColor);
   padding: calc(8rem / 16) var(--sideWaysButtonPadding);
@@ -536,6 +581,18 @@ input::placeholder {
   gap: var(--colorButtonFlexGap);
 }
 
+.colorButtons > button:first-child {
+  background-color: var(--lifeStyleBlack);
+}
+
+.colorButtons:nth-child(2) > button {
+  background-color: var(--lifeStyleBrown);
+}
+
+.colorButtons > button:last-child {
+  background-color: var(--lifeStyleYellow);
+}
+
 /*.colorButtons > div {
   display: flex;
   align-items: center;
@@ -553,6 +610,9 @@ input::placeholder {
   height: var(--colorButtonRadius);
   padding: 0;
   background-color: #000000;
+}
+
+.colorButtonActive {
   outline: calc(1rem / 16) solid #000000;
   outline-offset: calc(1rem / 16);
 }
@@ -565,6 +625,10 @@ input::placeholder {
     padding: calc(128rem / 16) calc(96rem / 16);
   }
 
+  .heroBannerButton > a {
+    font-size: var(--paragraphSize);
+  }
+
   .productBanner video {
     max-width: calc(816rem / 16);
     max-height: calc(652rem / 16);
@@ -575,10 +639,10 @@ input::placeholder {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 calc(16rem / 16);
     }
-
-  .productBanner > div {
-    padding: 0;
-    grid-column: 2;
+    
+    .productBanner > div {
+      padding: 0;
+      grid-column: 2;
     }
     
     .productBanner > video {
@@ -592,8 +656,8 @@ input::placeholder {
         }
         
         .productBanner > div:last-child {
-    grid-row: 2;
-  } */
+          grid-row: 2;
+          } */
   .productBanner {
     display: grid;
     grid-template-areas:
@@ -686,6 +750,11 @@ input::placeholder {
     grid-area: accordion;
   }
 
+  .socialMediaCarousel > img {
+    min-width: calc(340rem / 16);
+    min-height: calc(425rem / 16);
+  }
+
   #mailFormFooter {
     display: flex;
     gap: calc(160rem / 16);
@@ -704,18 +773,26 @@ input::placeholder {
     flex-direction: row;
     justify-content: space-between;
   }
+}
 
-  @media (min-width: 1441px) {
-    :root {
-      --heroMediaHeight: calc(1200rem/16);
-    }
+@media (min-width: 1441px) {
+  :root {
+    --heroMediaHeight: calc(1200rem/16);
+  }
 
-    .card {
-      min-width: 24%;
-    }
+  .heroBannerButton > a {
+    font-size: var(--paragraphSize);
+  }
 
-    video {
-      min-width: calc(900rem / 16);
-    }
+  .card {
+    min-width: 24%;
+  }
+
+  video {
+    min-width: calc(900rem / 16);
+  }
+  #mailFormFooter {
+    display: flex;
+    gap: calc(480rem / 16);
   }
 }
