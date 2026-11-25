@@ -222,7 +222,12 @@ require_once __DIR__ . '/data.php';
                 <img src="image_video\Post 2 – deadline 1.png" />
                 <img src="image_video\Post 3 – the first drop 1.png" />
                 <img src="image_video\Post 4 – carve your path 1.png" />
-            </div>'
+            </div>
+            <div>
+                <div>
+                    <button>Go to insta</button>
+                </div>
+            </div>
         </div>
     </main>
 

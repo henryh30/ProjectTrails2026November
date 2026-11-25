@@ -485,6 +485,16 @@ nav button {
   flex: 0 0 calc(233rem / 16);
 }
 
+.socialMediaPictures > div > div {
+  display: inline-block;
+  background-color: var(--buttonColor);
+  padding: calc(8rem / 16) calc(16rem / 16);
+}
+
+.socialMediaPictures button {
+  background-color: var(--buttonColor);
+}
+
 /*Styling of social media carousel: End */
 /* Styling of footer and form: Start*/
 
