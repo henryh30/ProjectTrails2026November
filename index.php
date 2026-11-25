@@ -20,7 +20,7 @@ require_once __DIR__ . '/data.php';
                         <img src="image_video\searchIcon.svg" alt="Search icom">
                     </button>
                     <button id="hamburgerMenu">
-                        <img src="image_video\Menu button.svg" alt="Hamburger menu ikon">
+                        <img src="image_video\Menu button.svg" alt="två studenter som ligger och sitter på en sten mitt i vattnet. grön vattenflaska finns också på stenen">
                     </button>
                 </div>
             </div>
@@ -87,7 +87,7 @@ require_once __DIR__ . '/data.php';
                 <?php foreach ($productCards as $card) : ?>
                     <div class="card">
                         <div>
-                            <img src="<?php echo $card['imageUrl'] ?>" alt="A <?php echo $card['name'] ?>" />
+                            <img src="<?php echo $card['imageUrl'] ?>" alt="A <?php echo $card['alt'] ?>" />
                         </div>
                         <div>
                             <h3><?php echo $card['name'] ?></h3>
@@ -218,10 +218,10 @@ require_once __DIR__ . '/data.php';
         <div class="socialMediaPictures">
             <h2>Follow along @spår</h2>'
             <div class="socialMediaCarousel">
-                <img src="image_video\bottle_box233x292.png" alt="Spar bottle and package with logo on it" />
-                <img src="image_video/placeHolder.png" />
-                <img src="image_video/placeHolder.png" />
-                <img src="image_video/placeHolder.png" />
+                <img src="image_video\Post 1 – study spot 1.png" alt="Spar bottle and package with logo on it" />
+                <img src="image_video\Post 2 – deadline 1.png" />
+                <img src="image_video\Post 3 – the first drop 1.png" />
+                <img src="image_video\Post 4 – carve your path 1.png" />
             </div>'
         </div>
     </main>
