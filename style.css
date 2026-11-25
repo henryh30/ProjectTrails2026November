@@ -69,10 +69,20 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Media query of desktop version: Start */
@@ -741,6 +751,7 @@ input::placeholder {
 
   .secondBanner {
     display: grid;
+    grid-template-rows: 1fr 1fr 10fr;
     grid-template-areas:
       "header video"
       "paragraph video"
@@ -753,6 +764,7 @@ input::placeholder {
 
   .finalProductBanner {
     display: grid;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas:
       "header header"
       "video accordion"

@@ -6,6 +6,7 @@ $productCards = [
         'price' => "1,499 SEK",
         'hasVariant' => true,
         'defaultColorActive' => 'black',
+        'alt' => "produkt, svart sko i foam material",
     ],
     [
         'name' => "Bloom bottle",
@@ -13,6 +14,7 @@ $productCards = [
         'price' => "899 SEK",
         'hasVariant' => false,
         'defaultColorActive' => 'none',
+        'alt' => "produkt, grön vattenflaska i vågig design",
     ],
     [
         'name' => "Bloom keychain",
@@ -20,6 +22,7 @@ $productCards = [
         'price' => "349 SEK",
         'hasVariant' => true,
         'defaultColorActive' => 'yellow',
+        'alt' => "produkt, nyckelring med metallknippa i ljus gul",
     ],
     [
         'name' => "Bloom ring",
@@ -27,5 +30,6 @@ $productCards = [
         'price' => "149 SEK",
         'hasVariant' => false,
         'defaultColorActive' => 'none',
+        'alt' => "produkt, ring i silver med organiska former",
     ],
 ];
