@@ -18,6 +18,8 @@
   --fontFamilyParagraph: "DM Mono";
 
   --h1Color: #e4ff76;
+  --labelColor: #101010;
+  --inputColor: #363636;
   --CTAColor: #e4ff76;
   --navColor: #fefff8;
   --buttonColor: #000000;
@@ -124,14 +126,31 @@ h1,
 h2,
 h3,
 h4,
-button {
+button,
+label,
+input {
   font-family: var(--fontFamilyDMSans);
   margin: 0;
+}
+
+label {
+  font-size: var(--labelSize);
+  color: var(--labelColor);
+}
+
+input::placeholder {
+  font-size: calc(16rem / 16);
+  color: var(--inputColor);
+}
+
+button {
+  letter-spacing: 8%;
 }
 
 p {
   font-family: var(--fontFamilyParagraph);
   font-size: var(--paragraphSize);
+  letter-spacing: 10%;
   margin: 0;
 }
 
@@ -200,6 +219,7 @@ nav {
   justify-content: space-between;
   padding: calc(12rem / 16) calc(16rem / 16);
   background-color: var(--navColor);
+  border-bottom: solid black 1px;
 }
 nav > div {
   display: flex;
@@ -499,7 +519,7 @@ nav button {
 /* Styling of footer and form: Start*/
 
 footer {
-  background: var(--backgroundForm);
+  background: var(--backgroundColor);
 }
 
 footer button {
@@ -571,6 +591,10 @@ input::placeholder {
   font-size: var(--paragraphSmallSize);
 }
 
+.bottomFooterSection > div {
+  flex: 1;
+}
+
 .footerColumn {
   display: flex;
   flex-direction: column;
@@ -595,6 +619,10 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: var(--firstLinkBoxFlexGap);
+}
+
+.firstFooterColumn li {
+  font-family: var(--fontFamilyParagraph);
 }
 
 .linkList {
@@ -662,6 +690,10 @@ input::placeholder {
 
   .heroBannerButton > a {
     font-size: var(--paragraphSize);
+  }
+
+  .heroBannerButton {
+    padding: calc(12rem / 16) 0;
   }
 
   .productBanner video {
@@ -804,10 +836,12 @@ input::placeholder {
     min-width: calc(340rem / 16);
     min-height: calc(425rem / 16);
   }
+  #mailFormFooter > div:first-child {
+    flex: 1;
+  }
 
-  #mailFormFooter {
-    display: flex;
-    gap: calc(160rem / 16);
+  #mailFormFooter > div:last-child {
+    flex: 2;
   }
 
   #mailFormFooter > div:last-child {
@@ -824,7 +858,8 @@ input::placeholder {
     justify-content: space-between;
   }
   button,
-  a {
+  a,
+  span {
     font-size: var(--paragraphSize);
   }
 }
@@ -853,16 +888,14 @@ input::placeholder {
   video {
     min-width: calc(900rem / 16);
   }
-  #mailFormFooter {
-    display: flex;
-    gap: calc(480rem / 16);
-  }
+
   .socialMediaCarousel > img {
     min-width: calc(480rem / 16);
     min-height: calc(585rem / 16);
   }
   button,
-  a {
+  a,
+  span {
     font-size: var(--paragraphSize);
   }
 }
