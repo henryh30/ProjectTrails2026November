@@ -95,9 +95,15 @@ require_once __DIR__ . '/data.php';
                         </div>
                         <?php if ($card['hasVariant']): ?>
                             <div class="colorButtons">
-                                <button></button>
-                                <button></button>
-                                <button></button>
+                                <button class="<?php if ($card['defaultColorActive'] === 'black') {
+                                                    echo "colorButtonActive";
+                                                } ?>"></button>
+                                <button class="<?php if ($card['defaultColorActive'] === 'brown') {
+                                                    echo "colorButtonActive";
+                                                } ?>"></button>
+                                <button class="<?php if ($card['defaultColorActive'] === 'yellow') {
+                                                    echo "colorButtonActive";
+                                                } ?>"></button>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -114,16 +120,17 @@ require_once __DIR__ . '/data.php';
             <div>
                 <h2>MAKE IT YOUR OWN</h2>
             </div>
-            <video autoplay loop muted>
+            <!--<video autoplay loop muted>
                 <source src="image_video/cube_Video.mp4" tyoe="video/mp4">
-            </video>
+            </video> -->
+            <img src="image_video\Lifestyle_brown 1.png" alt="Lifestyle of keychain">
             <div>
                 <div class="secondProductBannerDescription">
                     <p>PICK A COLOUR FOR YOUR BLOOM KEYRING AND SEE IT IN 3D.</p>
                     <div class="colorButtons">
-                        <button></button>
-                        <button></button>
-                        <button></button>
+                        <button class="blackColorButton"></button>
+                        <button class="brownColorButton colorButtonActive"></button>
+                        <button class="yellowColorButton"></button>
                     </div>
                 </div>
                 <div>

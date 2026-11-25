@@ -9,6 +9,27 @@
   },
 ]; */
 
+const lifeStyleImages = [
+  {
+    name: "blackColorButton",
+    imageUrl: "image_video\\Lifestyle_Green 1.png",
+  },
+  {
+    name: "brownColorButton",
+    imageUrl: "image_video\\Lifestyle_brown 1.png",
+  },
+  {
+    name: "yellowColorButton",
+    imageUrl: "image_video\\Lifestyle_Beige 1.png",
+  },
+];
+
+const lifeStyleImage = document.querySelector(".secondBanner > img");
+
+const colorButtonSecondBanner = document.querySelectorAll(
+  ".secondProductBannerDescription > .colorButtons > button",
+);
+
 const spiningProductVideo = document.querySelector(".productBanner video");
 const spiningProductVideoSource = document.querySelector(
   ".productBanner video > source",
@@ -41,6 +62,24 @@ productCards.forEach((productCard) => {
       if (video.name == productName.textContent) {
         spiningProductVideoSource.src = video.videoUrl;
         spiningProductVideo.load();
+      }
+    });
+  });
+});
+
+colorButtonSecondBanner.forEach((colorButton) => {
+  colorButton.addEventListener("click", () => {
+    colorButtonSecondBanner.forEach((button) => {
+      if (button.classList.contains("colorButtonActive")) {
+        button.classList.remove("colorButtonActive");
+      }
+    });
+
+    lifeStyleImages.forEach((image) => {
+      colorButton.classList.add("colorButtonActive");
+      if (colorButton.classList.contains(image.name)) {
+        lifeStyleImage.src = image.imageUrl;
+        lifeStyleImage.load();
       }
     });
   });

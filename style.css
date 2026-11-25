@@ -24,6 +24,7 @@
   --backgroundForm: #ececec;
   --buttonTextColor: var(--backgroundColor);
   --backgroundColor: #fefff8;
+  --formBackground: #f4f6e9;
 
   --lifeStyleBlack: #000000;
   --lifeStyleBrown: #1a0d02;
@@ -343,6 +344,13 @@ nav button {
   overflow: hidden;
 }
 
+.secondBanner > img {
+  object-fit: cover;
+  overflow: hidden;
+  min-height: 100%;
+  min-width: 80%;
+}
+
 .firstBanner video {
   object-fit: contain;
 }
@@ -527,6 +535,7 @@ input::placeholder {
 
 .mailForm input {
   padding: var(--sideWaysPadding) var(--sideWaysPadding);
+  background-color: var(--formBackground);
 }
 
 .bottomFooterSection {
@@ -612,6 +621,11 @@ input::placeholder {
   background-color: #000000;
 }
 
+.secondProductBannerDescription > .colorButtons > button {
+  width: calc(32rem / 16);
+  height: calc(32rem / 16);
+}
+
 .colorButtonActive {
   outline: calc(1rem / 16) solid #000000;
   outline-offset: calc(1rem / 16);
@@ -684,6 +698,10 @@ input::placeholder {
     min-width: calc(340rem / 16);
   }
 
+  .card p {
+    font-size: var(--paragraphSize);
+  }
+
   .card > div:first-child {
     min-height: calc(604rem / 16);
     min-width: calc(304rem / 16);
@@ -716,12 +734,21 @@ input::placeholder {
     justify-content: start;
   }
 
+  .secondBanner > img {
+    min-width: calc(816rem / 16);
+    min-height: calc(652rem / 16);
+  }
+
   .secondBanner {
     display: grid;
     grid-template-areas:
       "header video"
       "paragraph video"
       "paragraph video";
+  }
+
+  .secondBanner > img {
+    grid-area: video;
   }
 
   .finalProductBanner {
@@ -784,8 +811,15 @@ input::placeholder {
     font-size: var(--paragraphSize);
   }
 
+  .secondBanner > img {
+    min-width: calc(816rem / 16);
+    min-height: calc(652rem / 16);
+  }
   .card {
     min-width: 24%;
+  }
+  .card p {
+    font-size: var(--paragraphSize);
   }
 
   video {
@@ -794,5 +828,9 @@ input::placeholder {
   #mailFormFooter {
     display: flex;
     gap: calc(480rem / 16);
+  }
+  .socialMediaCarousel > img {
+    min-width: calc(480rem / 16);
+    min-height: calc(585rem / 16);
   }
 }
