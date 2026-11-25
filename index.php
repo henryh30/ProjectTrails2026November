@@ -45,8 +45,8 @@ require_once __DIR__ . '/data.php';
             <div class="heroImageText">
                 <div>
                     <div class="heroText">
-                        <h1>Carve your path</h1>
-                        <p>OUR FIRST DROP. SHOES AND ACCESSORIES MADE WITH ALGAE FROM SWEDISH WATERS.</p>
+                        <h1>New Drops</h1>
+                        <p>THE STUFF YOU CARRY FROM LECTURES TO THE LAKE. STARTING WITH SHOES MADE FROM ALGAE.</p>
                     </div>
                     <div>
                         <div class="heroImageButton">
