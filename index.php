@@ -111,7 +111,7 @@ require_once __DIR__ . '/data.php';
             </div>
             <div class="productFlexButton">
                 <div class="buttonContainer">
-                    <a href="#">See the whole collection</a>
+                    <a>See the whole collection</a>
                 </div>
             </div>
         </div>
@@ -209,7 +209,7 @@ require_once __DIR__ . '/data.php';
                 </div>
                 <div>
                     <div class="buttonContainer">
-                        <a href="#">Read the full story</a>
+                        <a>Read the full story</a>
                     </div>
                 </div>
             </div>
