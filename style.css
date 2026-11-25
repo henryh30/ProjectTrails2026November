@@ -644,6 +644,7 @@ input::placeholder {
 @media (min-width: 1024px) {
   :root {
     --heroMediaHeight: calc(810rem/16);
+    --labelSize: calc(16rem/16);
   }
   .heroImageText {
     padding: calc(128rem / 16) calc(96rem / 16);
@@ -812,11 +813,16 @@ input::placeholder {
     flex-direction: row;
     justify-content: space-between;
   }
+  button,
+  a {
+    font-size: var(--paragraphSize);
+  }
 }
 
 @media (min-width: 1441px) {
   :root {
     --heroMediaHeight: calc(1200rem/16);
+    --labelSize: calc(16rem/16);
   }
 
   .heroBannerButton > a {
@@ -844,5 +850,9 @@ input::placeholder {
   .socialMediaCarousel > img {
     min-width: calc(480rem / 16);
     min-height: calc(585rem / 16);
+  }
+  button,
+  a {
+    font-size: var(--paragraphSize);
   }
 }
