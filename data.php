@@ -1,7 +1,7 @@
 <?php
 $productCards = [
     [
-        'name' => "Bloom shoe",
+        'name' => "Stride shoe",
         'imageUrl' => "image_video\sko 1.png",
         'price' => "1,499 SEK",
         'hasVariant' => true,
@@ -9,7 +9,7 @@ $productCards = [
         'alt' => "produkt, svart sko i foam material",
     ],
     [
-        'name' => "Bloom bottle",
+        'name' => "Bay bottle",
         'imageUrl' => "image_video\\flaska 1.png",
         'price' => "899 SEK",
         'hasVariant' => false,
@@ -17,7 +17,7 @@ $productCards = [
         'alt' => "produkt, grön vattenflaska i vågig design",
     ],
     [
-        'name' => "Bloom keychain",
+        'name' => "kelp keychain",
         'imageUrl' => "image_video\Keychain 1.png",
         'price' => "349 SEK",
         'hasVariant' => true,
@@ -25,7 +25,7 @@ $productCards = [
         'alt' => "produkt, nyckelring med metallknippa i ljus gul",
     ],
     [
-        'name' => "Bloom ring",
+        'name' => "Ripple ring",
         'imageUrl' => "image_video\Ring 1.png",
         'price' => "149 SEK",
         'hasVariant' => false,
