@@ -17,10 +17,20 @@
   --fontFamilyDMSans: "DM Sans";
   --fontFamilyParagraph: "DM Mono";
 
+  --h1Color: #e4ff76;
+  --labelColor: #101010;
+  --inputColor: #363636;
+  --CTAColor: #e4ff76;
   --navColor: #fefff8;
   --buttonColor: #000000;
   --backgroundForm: #ececec;
-  --buttonTextColor: #ffffff;
+  --buttonTextColor: var(--backgroundColor);
+  --backgroundColor: #fefff8;
+  --formBackground: #f4f6e9;
+
+  --lifeStyleBlack: #000000;
+  --lifeStyleBrown: #1a0d02;
+  --lifeStyleYellow: #e4ff76;
 
   --heroMediaHeight: calc(690rem/16);
   --bigProductCardHeight: calc(320rem/16);
@@ -46,10 +56,35 @@
   --accordionPadding: calc(16rem/16);
 }
 
+@keyframes fallDown {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 50%;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Media query of desktop version: Start */
@@ -91,20 +126,38 @@ h1,
 h2,
 h3,
 h4,
-button {
+button,
+label,
+input {
   font-family: var(--fontFamilyDMSans);
   margin: 0;
+}
+
+label {
+  font-size: var(--labelSize);
+  color: var(--labelColor);
+}
+
+input::placeholder {
+  font-size: calc(16rem / 16);
+  color: var(--inputColor);
+}
+
+button {
+  letter-spacing: 8%;
 }
 
 p {
   font-family: var(--fontFamilyParagraph);
   font-size: var(--paragraphSize);
+  letter-spacing: 10%;
   margin: 0;
 }
 
 h1 {
   font-size: var(--h1Size);
   margin: 0;
+  color: var(--h1Color);
 }
 
 h2 {
@@ -139,6 +192,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--websiteBoxGap);
+  background-color: var(--backgroundColor);
 }
 
 li {
@@ -165,6 +219,7 @@ nav {
   justify-content: space-between;
   padding: calc(12rem / 16) calc(16rem / 16);
   background-color: var(--navColor);
+  border-bottom: solid black 1px;
 }
 nav > div {
   display: flex;
@@ -198,6 +253,8 @@ nav button {
   flex-direction: column;
   gap: calc(16rem / 16);
   padding: calc(48rem / 16);
+  animation: fallDown;
+  animation-fill-mode: forwards;
 }
 
 .navIcons {
@@ -213,6 +270,12 @@ nav button {
   min-height: var(--heroMediaHeight);
 }
 
+.heroContainer > img {
+  height: var(--heroMediaHeight);
+  object-fit: cover;
+  overflow: hidden;
+}
+
 .heroContainer > video {
   height: var(--heroMediaHeight);
   object-fit: cover;
@@ -222,10 +285,10 @@ nav button {
 .heroImageText > div:first-child {
   display: inline-flex;
   flex-direction: column;
+}
 
-  .heroContainer p {
-    color: white;
-  }
+.heroContainer p {
+  color: white;
   /*margin: calc(64rem / 16) var(--sideWaysPadding);*/
 }
 
@@ -259,6 +322,7 @@ nav button {
   align-items: center;
   border-top: solid calc(1rem / 16) var(--buttonColor);
   border-bottom: solid calc(1rem / 16) var(--buttonColor);
+  background-color: var(--CTAColor);
 }
 /* End of hero section styling */
 .buttonContainer {
@@ -310,6 +374,17 @@ nav button {
   overflow: hidden;
 }
 
+.secondBanner > img {
+  object-fit: cover;
+  overflow: hidden;
+  min-height: 100%;
+  min-width: 80%;
+}
+
+.firstBanner video {
+  object-fit: contain;
+}
+
 .productBannerDescription {
   display: inline-flex;
   flex-direction: column;
@@ -317,7 +392,7 @@ nav button {
 }
 
 .finalProductBanner {
-  background: #787878;
+  background: var(--h1Color);
 }
 
 .accordions > div {
@@ -379,8 +454,12 @@ nav button {
   min-width: calc(168rem / 16);
 }
 
+.card p {
+  font-size: var(--paragraphSmallSize);
+}
+
 .card img {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   height: 100%;
 }
@@ -426,11 +505,21 @@ nav button {
   flex: 0 0 calc(233rem / 16);
 }
 
+.socialMediaPictures > div > div {
+  display: inline-block;
+  background-color: var(--buttonColor);
+  padding: calc(8rem / 16) calc(16rem / 16);
+}
+
+.socialMediaPictures button {
+  background-color: var(--buttonColor);
+}
+
 /*Styling of social media carousel: End */
 /* Styling of footer and form: Start*/
 
 footer {
-  background: var(--backgroundForm);
+  background: var(--backgroundColor);
 }
 
 footer button {
@@ -474,6 +563,10 @@ input::placeholder {
   height: 100%;
 }
 
+#mailFormFooter button {
+  color: var(--h1Color);
+}
+
 .mailForm button {
   background: var(--buttonColor);
   padding: calc(8rem / 16) var(--sideWaysButtonPadding);
@@ -482,6 +575,7 @@ input::placeholder {
 
 .mailForm input {
   padding: var(--sideWaysPadding) var(--sideWaysPadding);
+  background-color: var(--formBackground);
 }
 
 .bottomFooterSection {
@@ -495,6 +589,10 @@ input::placeholder {
 .bottomFooterSection a {
   color: var(--buttonColor);
   font-size: var(--paragraphSmallSize);
+}
+
+.bottomFooterSection > div {
+  flex: 1;
 }
 
 .footerColumn {
@@ -523,6 +621,10 @@ input::placeholder {
   gap: var(--firstLinkBoxFlexGap);
 }
 
+.firstFooterColumn li {
+  font-family: var(--fontFamilyParagraph);
+}
+
 .linkList {
   display: flex;
   flex-direction: column;
@@ -534,6 +636,18 @@ input::placeholder {
 .colorButtons {
   display: inline-flex;
   gap: var(--colorButtonFlexGap);
+}
+
+.colorButtons > button:first-child {
+  background-color: var(--lifeStyleBlack);
+}
+
+.colorButtons:nth-child(2) > button {
+  background-color: var(--lifeStyleBrown);
+}
+
+.colorButtons > button:last-child {
+  background-color: var(--lifeStyleYellow);
 }
 
 /*.colorButtons > div {
@@ -553,6 +667,14 @@ input::placeholder {
   height: var(--colorButtonRadius);
   padding: 0;
   background-color: #000000;
+}
+
+.secondProductBannerDescription > .colorButtons > button {
+  width: calc(32rem / 16);
+  height: calc(32rem / 16);
+}
+
+.colorButtonActive {
   outline: calc(1rem / 16) solid #000000;
   outline-offset: calc(1rem / 16);
 }
@@ -560,9 +682,22 @@ input::placeholder {
 @media (min-width: 1024px) {
   :root {
     --heroMediaHeight: calc(810rem/16);
+    --labelSize: calc(16rem/16);
   }
   .heroImageText {
     padding: calc(128rem / 16) calc(96rem / 16);
+  }
+
+  .heroBannerButton > a {
+    font-size: var(--paragraphSize);
+  }
+
+  .heroText {
+    max-width: calc(632rem / 16);
+  }
+
+  .heroBannerButton {
+    padding: calc(12rem / 16) 0;
   }
 
   .productBanner video {
@@ -575,10 +710,10 @@ input::placeholder {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 calc(16rem / 16);
     }
-
-  .productBanner > div {
-    padding: 0;
-    grid-column: 2;
+    
+    .productBanner > div {
+      padding: 0;
+      grid-column: 2;
     }
     
     .productBanner > video {
@@ -592,8 +727,8 @@ input::placeholder {
         }
         
         .productBanner > div:last-child {
-    grid-row: 2;
-  } */
+          grid-row: 2;
+          } */
   .productBanner {
     display: grid;
     grid-template-areas:
@@ -618,6 +753,10 @@ input::placeholder {
   .card {
     min-height: calc(706rem / 16);
     min-width: calc(340rem / 16);
+  }
+
+  .card p {
+    font-size: var(--paragraphSize);
   }
 
   .card > div:first-child {
@@ -652,16 +791,27 @@ input::placeholder {
     justify-content: start;
   }
 
+  .secondBanner > img {
+    min-width: calc(816rem / 16);
+    min-height: calc(652rem / 16);
+  }
+
   .secondBanner {
     display: grid;
+    grid-template-rows: 1fr 1fr 10fr;
     grid-template-areas:
       "header video"
       "paragraph video"
       "paragraph video";
   }
 
+  .secondBanner > img {
+    grid-area: video;
+  }
+
   .finalProductBanner {
     display: grid;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas:
       "header header"
       "video accordion"
@@ -686,9 +836,16 @@ input::placeholder {
     grid-area: accordion;
   }
 
-  #mailFormFooter {
-    display: flex;
-    gap: calc(160rem / 16);
+  .socialMediaCarousel > img {
+    min-width: calc(340rem / 16);
+    min-height: calc(425rem / 16);
+  }
+  #mailFormFooter > div:first-child {
+    flex: 1;
+  }
+
+  #mailFormFooter > div:last-child {
+    flex: 2;
   }
 
   #mailFormFooter > div:last-child {
@@ -704,18 +861,45 @@ input::placeholder {
     flex-direction: row;
     justify-content: space-between;
   }
+  button,
+  a,
+  span {
+    font-size: var(--paragraphSize);
+  }
+}
 
-  @media (min-width: 1441px) {
-    :root {
-      --heroMediaHeight: calc(1200rem/16);
-    }
+@media (min-width: 1441px) {
+  :root {
+    --heroMediaHeight: calc(1200rem/16);
+    --labelSize: calc(16rem/16);
+  }
 
-    .card {
-      min-width: 24%;
-    }
+  .heroBannerButton > a {
+    font-size: var(--paragraphSize);
+  }
 
-    video {
-      min-width: calc(900rem / 16);
-    }
+  .secondBanner > img {
+    min-width: calc(816rem / 16);
+    min-height: calc(652rem / 16);
+  }
+  .card {
+    min-width: 24%;
+  }
+  .card p {
+    font-size: var(--paragraphSize);
+  }
+
+  video {
+    min-width: calc(900rem / 16);
+  }
+
+  .socialMediaCarousel > img {
+    min-width: calc(480rem / 16);
+    min-height: calc(585rem / 16);
+  }
+  button,
+  a,
+  span {
+    font-size: var(--paragraphSize);
   }
 }
