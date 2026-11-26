@@ -692,6 +692,10 @@ input::placeholder {
     font-size: var(--paragraphSize);
   }
 
+  .heroText {
+    max-width: calc(632rem / 16);
+  }
+
   .heroBannerButton {
     padding: calc(12rem / 16) 0;
   }
